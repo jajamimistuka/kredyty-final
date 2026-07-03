@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kredyt bez tajemnic | Małgorzata Drzazgowska — Pośrednik Kredytowy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0d;
+  --paper:#f5f2ec;
+  --gold:#c9a84c;
+  --gold-dark:#a8893a;
+  --green:#0e1724;
+  --green-light:#1c2e45;
+  --line:#e0d9cc;
+  --white:#fdfbf7;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Georgia','Iowan Old Style',serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+
+/* HEADER */
+header{background:#08111f;color:var(--white);padding:22px 0;border-bottom:1px solid rgba(201,168,76,.4);}
+header .wrap{display:flex;align-items:center;justify-content:space-between;}
+.brand{font-size:20px;letter-spacing:2.5px;font-weight:600;text-transform:uppercase;font-family:'Inter','Helvetica Neue',Arial,sans-serif;}
+.brand span{color:var(--gold);font-weight:300;}
+.brand-wrap{display:flex;flex-direction:column;gap:3px;}
+.brand-sub{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:400;}
+@media(max-width:760px){.omnie-grid{grid-template-columns:1fr!important;gap:32px!important;}}
+nav a{color:var(--white);text-decoration:none;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;margin-left:24px;opacity:.85;}
+nav a:hover{opacity:1;text-decoration:underline;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#08111f 0%,#0e1b2e 60%,#0a1520 100%);color:var(--white);padding:64px 0 90px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:420px;height:420px;border:1px solid rgba(201,168,76,.15);border-radius:50%;}
+.hero::before{content:"";position:absolute;right:60px;top:60px;width:240px;height:240px;border:1px solid rgba(201,168,76,.08);border-radius:50%;}
+.eyebrow{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+h1{font-size:52px;line-height:1.1;margin:0 0 22px;max-width:620px;font-weight:400;font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:-.5px;}
+h1 em{font-style:italic;color:var(--gold);}
+.hero p.lead{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:17px;max-width:520px;line-height:1.6;color:#dfe7e1;margin-bottom:32px;}
+.stamp{position:absolute;right:48px;bottom:30px;width:128px;height:128px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);transform:rotate(-8deg);}
+.stamp b{display:block;font-size:30px;font-family:Georgia,serif;color:var(--white);line-height:1;margin-bottom:4px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--ink);border:none;padding:15px 28px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .15s;text-decoration:none;display:inline-block;}
+.btn-gold:hover{background:var(--gold-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,168,76,.3);}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.4);padding:15px 28px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:border-color .15s;text-decoration:none;display:inline-block;}
+.btn-outline:hover{border-color:var(--white);}
+
+@media(max-width:760px){.stamp{position:static;transform:rotate(-3deg);margin-top:32px;}h1{font-size:30px;}}
+
+/* TRUST STRIP */
+.trust-strip{padding:52px 0;border-bottom:1px solid var(--line);background:var(--white);}
+.trust{display:flex;gap:48px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;flex-wrap:wrap;}
+.trust .item b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:40px;color:var(--green);line-height:1;font-weight:600;}
+.trust .item span{font-size:10px;color:#8a8470;letter-spacing:2px;text-transform:uppercase;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:400;}
+
+/* SECTIONS */
+.section{padding:72px 0;}
+.section h2{font-size:36px;font-weight:400;margin:0 0 8px;font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:-.3px;}
+.kicker{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;}
+.divider{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px 0 50px;opacity:.4;}
+
+/* QUIZ */
+.quiz-wrap{background:var(--white);border:1px solid var(--line);border-radius:0;overflow:hidden;box-shadow:0 20px 50px -24px rgba(16,31,26,.3);}
+.quiz-header{background:#08111f;padding:32px 36px;color:var(--white);border-bottom:1px solid rgba(201,168,76,.2);}
+.quiz-header h3{font-size:24px;font-weight:400;color:var(--white);margin-bottom:6px;font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:.3px;}
+.quiz-header p{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:#cfe0d6;}
+.progress-bar-wrap{background:rgba(255,255,255,.08);border-radius:0;height:4px;margin-top:20px;}
+.progress-bar{background:linear-gradient(90deg,var(--gold),#e8c96a);height:4px;border-radius:0;transition:width .4s ease;}
+.progress-label{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;color:#cfe0d6;margin-top:6px;letter-spacing:.5px;}
+
+.quiz-body{padding:40px 36px;}
+@media(max-width:600px){.quiz-body{padding:28px 20px;}.quiz-header{padding:22px 20px;}}
+
+.quiz-step{display:none;animation:fadeIn .3s ease;}
+.quiz-step.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.quiz-question{font-size:26px;font-weight:400;margin-bottom:28px;line-height:1.35;font-family:'Cormorant Garamond',Georgia,serif;}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
+@media(max-width:540px){.quiz-options{grid-template-columns:1fr;}}
+.quiz-option{
+  border:1.5px solid var(--line);
+  border-radius:4px;
+  padding:16px 18px;
+  font-family:'Inter','Helvetica Neue',Arial,sans-serif;
+  font-size:15px;
+  cursor:pointer;
+  transition:all .15s;
+  background:var(--paper);
+  display:flex;align-items:center;gap:10px;
+}
+.quiz-option:hover{border-color:var(--gold);background:var(--white);}
+.quiz-option.selected{border-color:var(--gold);background:#faf7f0;color:#0d0d0d;box-shadow:inset 3px 0 0 var(--gold);}
+.quiz-option .icon{font-size:20px;flex-shrink:0;}
+
+.quiz-input-wrap{margin-bottom:28px;}
+.quiz-input-wrap label{display:block;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--green-light);margin-bottom:8px;font-weight:600;}
+.quiz-input-wrap input{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:4px;font-size:18px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;background:var(--paper);color:var(--ink);}
+.quiz-input-wrap input:focus{outline:none;border-color:var(--gold);background:var(--white);}
+.quiz-input-wrap .hint{font-size:12px;color:#8a8470;margin-top:6px;}
+
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px;}
+.btn-back{background:none;border:none;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;color:#8a8470;cursor:pointer;padding:8px 0;}
+.btn-back:hover{color:var(--ink);}
+.btn-next{background:var(--green);color:var(--white);border:none;padding:15px 32px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .15s;}
+.btn-next:hover{background:var(--gold-dark);transform:translateY(-1px);}
+.btn-next:disabled{opacity:.4;cursor:default;}
+
+/* THANK YOU */
+.quiz-thanks{text-align:center;padding:20px 0;}
+.quiz-thanks .check{font-size:52px;margin-bottom:16px;}
+.quiz-thanks h3{font-size:30px;font-weight:400;margin-bottom:10px;font-family:'Cormorant Garamond',Georgia,serif;}
+.quiz-thanks p{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;color:#3c4a41;line-height:1.6;max-width:420px;margin:0 auto 24px;}
+.quiz-thanks .summary{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 24px;text-align:left;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;margin-bottom:24px;}
+.quiz-thanks .summary div{padding:6px 0;border-bottom:1px solid var(--line);color:#3c4a41;}
+.quiz-thanks .summary div:last-child{border-bottom:none;}
+.quiz-thanks .summary span{color:var(--green);font-weight:600;}
+
+/* REGULAR FORM */
+.card{background:var(--white);border:1px solid var(--line);border-radius:0;padding:42px;box-shadow:0 18px 40px -28px rgba(16,31,26,.35);}
+@media(max-width:760px){.card{padding:26px;}}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;}
+.form-grid .full{grid-column:1/-1;}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr;}}
+label{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--green-light);margin-bottom:8px;font-weight:600;}
+input,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:0;font-size:15px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;background:var(--paper);color:var(--ink);}
+input:focus,select:focus{outline:none;border-color:var(--gold);background:var(--white);}
+.hint-sm{font-size:12px;color:#8a8470;margin-top:6px;}
+.submit-row{margin-top:36px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+button.cta{background:var(--gold);color:#0d0d0d;border-radius:0;letter-spacing:2px;border:none;padding:15px 32px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:background .15s;}
+button.cta:hover{background:var(--gold-dark);}
+.submit-note{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;color:#7a7563;}
+#status{margin-top:18px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;padding:14px 16px;border-radius:3px;display:none;}
+#status.ok{display:block;background:#eef3ec;border:1px solid var(--green-light);color:var(--green);}
+
+/* GUIDE */
+.steps{display:grid;gap:0;}
+.step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);}
+.step:last-child{border-bottom:none;}
+.step .num{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:26px;color:var(--gold-dark);font-weight:700;}
+.step h3{margin:0 0 6px;font-size:20px;font-weight:400;font-family:'Cormorant Garamond',Georgia,serif;letter-spacing:.2px;}
+.step p{margin:0;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.6;color:#3c4a41;}
+
+/* REFERRAL */
+.referral{background:#08111f;color:var(--white);border-radius:4px;padding:50px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;}
+@media(max-width:680px){.referral{grid-template-columns:1fr;padding:34px;}}
+.referral h2{color:var(--white);margin:0 0 10px;font-size:26px;font-weight:400;}
+.referral p{font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:#dfe7e1;margin:0;max-width:460px;line-height:1.6;}
+.payout{text-align:center;font-family:'Inter','Helvetica Neue',Arial,sans-serif;}
+.payout .amt{font-family:Georgia,serif;font-size:52px;color:var(--gold);line-height:1;}
+.payout .amt sup{font-size:22px;}
+.payout .label{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#cfe0d6;margin-top:4px;}
+
+/* MODERN FORM */
+.modern-form{display:flex;flex-direction:column;gap:0;}
+.mf-row{padding:28px 0;border-bottom:1px solid var(--line);}
+.mf-row:last-of-type{border-bottom:none;}
+.mf-row.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+@media(max-width:640px){.mf-row.two{grid-template-columns:1fr;}}
+.mf-label{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:600;color:var(--ink);letter-spacing:.5px;margin-bottom:4px;}
+.mf-sub{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;color:#8a8470;margin-bottom:14px;}
+.mf-input-wrap{position:relative;display:flex;align-items:center;}
+.mf-prefix{position:absolute;left:14px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;color:#8a8470;font-weight:600;pointer-events:none;}
+.mf-input-wrap input{width:100%;padding:13px 14px 13px 52px;border:1px solid var(--line);border-radius:0;font-size:16px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;background:var(--paper);color:var(--ink);transition:border-color .15s;}
+#imie_f,#telefon_f,#email_f{padding-left:14px!important;}
+.mf-input-wrap input:focus{outline:none;border-color:var(--gold);background:var(--white);}
+.mf-chips{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:0;padding:9px 18px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:14px;cursor:pointer;transition:all .15s;color:var(--ink);}
+.chip:hover{border-color:var(--gold);background:var(--white);}
+.chip.active{border-color:var(--gold);background:var(--gold);color:#0d0d0d;}
+.mf-submit{padding-top:32px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.mf-btn{background:var(--gold);color:#0d0d0d!important;border-radius:0;letter-spacing:2px;font-size:12px;color:var(--white);border:none;padding:16px 36px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;letter-spacing:.3px;border-radius:4px;cursor:pointer;transition:background .15s;}
+.mf-btn:hover{background:var(--gold-dark);transform:translateY(-1px);}
+.mf-consent{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;color:#8a8470;max-width:480px;line-height:1.5;}
+
+/* SECTION TABS (quiz vs form) */
+.tab-bar{display:flex;gap:0;border:1px solid var(--line);border-radius:0;overflow:hidden;margin-bottom:36px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;width:fit-content;}
+.tab-btn{padding:12px 26px;background:var(--paper);border:none;font-size:14px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;cursor:pointer;font-weight:600;letter-spacing:.3px;color:#6b6a5b;border-right:1.5px solid var(--line);transition:all .15s;}
+.tab-btn:last-child{border-right:none;}
+.tab-btn.active{background:#0e1724;color:var(--white);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+
+footer{background:#05080f;color:#bdb9a8;padding:30px 0;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;text-align:center;}
+
+/* BANK GRID */
+.bank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px;}
+@media(max-width:500px){.bank-grid{grid-template-columns:repeat(2,1fr);}}
+.bank-option{
+  border:1.5px solid var(--line);
+  border-radius:6px;
+  padding:16px 10px 12px;
+  cursor:pointer;
+  text-align:center;
+  background:var(--paper);
+  transition:all .15s;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.bank-option:hover{border-color:var(--gold);background:var(--white);transform:translateY(-1px);}
+.bank-option.selected{border-color:var(--gold);background:#faf7f0;box-shadow:inset 0 -3px 0 var(--gold);}
+.bank-option img{width:48px;height:48px;object-fit:contain;border-radius:4px;}
+.bank-fallback{width:48px;height:48px;background:#0e1724;color:var(--white);border-radius:4px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.5px;}
+.bank-option span{font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:600;color:var(--ink);}
+.bank-option.selected span{color:var(--green);}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand-wrap">
+      <div class="brand">Kredyt<span> bez tajemnic</span></div>
+      <div class="brand-sub">Małgorzata Drzazgowska — Pośrednik Kredytowy</div>
+    </div>
+    <nav>
+      <a href="#formularz">Wniosek</a>
+      <a href="#poradnik">Poradnik</a>
+      <a href="#polecenia">Polecenia</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Dyskretne · Profesjonalne · Skuteczne</div>
+    <h1>Profesjonalne pośrednictwo kredytowe — <em>indywidualnie</em> dla każdego klienta.</h1>
+    <p class="lead">Małgorzata Drzazgowska z 20-letnim doświadczeniem pomoże Ci wybrać najlepszą ofertę kredytową spośród dziesiątek banków. Bez ukrytych kosztów, bez prowizji dla Ciebie.</p>
+    <div class="hero-btns">
+      <a href="#formularz" class="btn-gold">Wypełnij quiz ➜</a>
+      <a href="#pelny-formularz" class="btn-outline">Formularz klasyczny</a>
+    </div>
+    <div class="stamp"><div><b>20</b>lat<br>na rynku</div></div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust">
+      <div class="item"><b>20 lat</b><span>doświadczenia</span></div>
+      <div class="item"><b>500 zł</b><span>za polecenie</span></div>
+      <div class="item"><b>5 minut</b><span>quiz online</span></div>
+      <div class="item"><b>0 zł</b><span>koszt doradztwa</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULARZ / QUIZ -->
+<section class="section" id="formularz">
+  <div class="wrap">
+    <div class="kicker">Złóż wniosek</div>
+    <h2>Wypełnij wniosek kredytowy</h2>
+    <div class="divider"></div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('quiz')">⚡ Quiz krok po kroku</button>
+      <button class="tab-btn" onclick="switchTab('form')" id="pelny-formularz">📋 Formularz klasyczny</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="tab-panel active" id="tab-quiz">
+      <div class="quiz-wrap">
+        <div class="quiz-header">
+          <h3>Sprawdź, ile możesz zaoszczędzić na refinansowaniu</h3>
+          <p>Bezpłatna analiza kredytu hipotecznego. Bez zobowiązań.</p>
+          <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:14%"></div></div>
+          <div class="progress-label" id="progressLabel">Krok 1 z 6</div>
+        </div>
+        <div class="quiz-body">
+
+          <!-- KROK 1 -->
+          <div class="quiz-step active" id="step1">
+            <div class="quiz-question">Co chcesz osiągnąć dzięki refinansowaniu?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="selectOption(this,'cel','Niższa miesięczna rata')"><span class="icon">📉</span>Niższa miesięczna rata</div>
+              <div class="quiz-option" onclick="selectOption(this,'cel','Krótszy czas spłaty')"><span class="icon">⏩</span>Krótszy czas spłaty</div>
+              <div class="quiz-option" onclick="selectOption(this,'cel','Mniejszy całkowity koszt kredytu')"><span class="icon">💰</span>Mniejszy całkowity koszt</div>
+              <div class="quiz-option" onclick="selectOption(this,'cel','Niższe oprocentowanie')"><span class="icon">📊</span>Niższe oprocentowanie</div>
+            </div>
+            <div class="quiz-nav">
+              <span></span>
+              <button class="btn-next" id="next1" onclick="nextStep(1)" disabled>Dalej →</button>
+            </div>
+          </div>
+
+          <!-- KROK 2 -->
+          <div class="quiz-step" id="step2">
+            <div class="quiz-question">W którym banku masz aktualnie kredyt?</div>
+            <div class="bank-grid">
+              <div class="bank-option" onclick="selectBank(this,'PKO BP')">
+                <img src="https://logo.clearbit.com/pkobp.pl" alt="PKO BP" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">PKO</div>
+                <span>PKO BP</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'Pekao')">
+                <img src="https://logo.clearbit.com/pekao.com.pl" alt="Pekao" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">PE</div>
+                <span>Pekao</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'ING')">
+                <img src="https://logo.clearbit.com/ing.pl" alt="ING" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">ING</div>
+                <span>ING</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'mBank')">
+                <img src="https://logo.clearbit.com/mbank.pl" alt="mBank" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">mB</div>
+                <span>mBank</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'Santander')">
+                <img src="https://logo.clearbit.com/santander.pl" alt="Santander" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">SAN</div>
+                <span>Santander</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'BNP Paribas')">
+                <img src="https://logo.clearbit.com/bnpparibas.pl" alt="BNP Paribas" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">BNP</div>
+                <span>BNP Paribas</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'Millennium')">
+                <img src="https://logo.clearbit.com/bankmillennium.pl" alt="Millennium" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">MIL</div>
+                <span>Millennium</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'Alior Bank')">
+                <img src="https://logo.clearbit.com/aliorbank.pl" alt="Alior Bank" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="bank-fallback" style="display:none">ALI</div>
+                <span>Alior Bank</span>
+              </div>
+              <div class="bank-option" onclick="selectBank(this,'Inny bank')">
+                <div class="bank-fallback" style="display:flex">···</div>
+                <span>Inny bank</span>
+              </div>
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-back" onclick="prevStep(2)">← Wróć</button>
+              <button class="btn-next" id="next2" onclick="nextStep(2)" disabled>Dalej →</button>
+            </div>
+          </div>
+
+          <!-- KROK 3 -->
+          <div class="quiz-step" id="step3">
+            <div class="quiz-question">Ile wynosi Twoja obecna miesięczna rata?</div>
+            <div class="quiz-input-wrap">
+              <label for="q_rata">Wysokość raty (zł)</label>
+              <input type="number" id="q_rata" placeholder="np. 2 500" min="100" step="50" oninput="saveVal('rata',this.value);checkNext(3)">
+              <div class="hint">Podaj przybliżoną kwotę, którą co miesiąc płacisz do banku.</div>
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-back" onclick="prevStep(3)">← Wróć</button>
+              <button class="btn-next" id="next3" onclick="nextStep(3)" disabled>Dalej →</button>
+            </div>
+          </div>
+
+          <!-- KROK 4 -->
+          <div class="quiz-step" id="step4">
+            <div class="quiz-question">Ile jeszcze zostało Ci do spłaty?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" onclick="selectOption(this,'pozostalo','Do 100 000 zł')"><span class="icon">💵</span>Do 100 000 zł</div>
+              <div class="quiz-option" onclick="selectOption(this,'pozostalo','100 000 – 250 000 zł')"><span class="icon">💵</span>100 000 – 250 000 zł</div>
+              <div class="quiz-option" onclick="selectOption(this,'pozostalo','250 000 – 500 000 zł')"><span class="icon">💵</span>250 000 – 500 000 zł</div>
+              <div class="quiz-option" onclick="selectOption(this,'pozostalo','Powyżej 500 000 zł')"><span class="icon">💵</span>Powyżej 500 000 zł</div>
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-back" onclick="prevStep(4)">← Wróć</button>
+              <button class="btn-next" id="next4" onclick="nextStep(4)" disabled>Dalej →</button>
+            </div>
+          </div>
+
+          <!-- KROK 5 -->
+          <div class="quiz-step" id="step5">
+            <div class="quiz-question">Zostaw dane — bezpłatnie sprawdzimy ile zaoszczędzisz.</div>
+            <div class="quiz-input-wrap">
+              <label for="q_imie">Imię</label>
+              <input type="text" id="q_imie" placeholder="np. Jan" oninput="saveVal('imie',this.value);checkNext(5)">
+            </div>
+            <div class="quiz-input-wrap" style="margin-top:16px;">
+              <label for="q_telefon">Telefon</label>
+              <input type="tel" id="q_telefon" placeholder="np. 600 000 000" oninput="saveVal('telefon',this.value);checkNext(5)">
+            </div>
+            <div class="quiz-input-wrap" style="margin-top:16px;">
+              <label for="q_email">E-mail</label>
+              <input type="email" id="q_email" placeholder="jan@example.com" oninput="saveVal('email',this.value);checkNext(5)">
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-back" onclick="prevStep(5)">← Wróć</button>
+              <button class="btn-next" id="next5" onclick="submitQuiz()" disabled>Sprawdź oszczędności ✓</button>
+            </div>
+          </div>
+
+          <!-- DZIĘKUJEMY -->
+          <div class="quiz-step" id="step6">
+            <div class="quiz-thanks">
+              <div class="check">✅</div>
+              <h3>Gotowe! Sprawdzimy ile zaoszczędzisz.</h3>
+              <p>Pośrednik skontaktuje się z Tobą w ciągu 24 godzin z bezpłatną analizą Twojego kredytu.</p>
+              <div class="summary" id="quizSummary"></div>
+              <p style="font-size:13px;font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:#8a8470;">Sprawdź też nasz <a href="#polecenia" style="color:var(--green);">program poleceń</a> — zarabiasz 500 zł za każdego poleconego znajomego!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMULARZ KLASYCZNY -->
+    <div class="tab-panel" id="tab-form">
+      <form id="kredytForm">
+        <div class="modern-form">
+
+          <div class="mf-row">
+            <div class="mf-field">
+              <div class="mf-label">Przeznaczenie finansowania</div>
+              <div class="mf-sub">Wskaż, na co mają zostać przeznaczone środki</div>
+              <div class="mf-chips">
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Zakup nieruchomości',this)">🏠 Zakup nieruchomości</button>
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Gotówka bez celu',this)">💵 Gotówka bez celu</button>
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Spłata innych zobowiązań',this)">🔄 Spłata zobowiązań</button>
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Prace budowlane / remont',this)">🔧 Prace budowlane</button>
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Finansowanie pojazdu',this)">🚗 Finansowanie pojazdu</button>
+                <button type="button" class="chip" onclick="chipSelect('cel_f','Inne przeznaczenie',this)">📋 Inne</button>
+              </div>
+              <input type="hidden" id="cel_f">
+            </div>
+          </div>
+
+          <div class="mf-row two">
+            <div class="mf-field">
+              <label class="mf-label" for="kwota_f">Wnioskowana kwota (zł)</label>
+              <div class="mf-sub">Szacunkowa wartość potrzebnego finansowania</div>
+              <div class="mf-input-wrap">
+                <span class="mf-prefix">PLN</span>
+                <input type="number" id="kwota_f" min="1000" step="1000" placeholder="np. 250 000" required>
+              </div>
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="okres_f">Horyzont spłaty (miesiące)</label>
+              <div class="mf-sub">Preferowany czas trwania umowy kredytowej</div>
+              <div class="mf-input-wrap">
+                <span class="mf-prefix">mies.</span>
+                <input type="number" id="okres_f" min="1" step="1" placeholder="np. 240" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="mf-row">
+            <div class="mf-field">
+              <div class="mf-label">Preferowany harmonogram rat</div>
+              <div class="mf-sub">Jak planujesz regulować zadłużenie?</div>
+              <div class="mf-chips">
+                <button type="button" class="chip" onclick="chipSelect('raty_f','Standardowy — przez cały okres umowy',this)">📆 Standardowy harmonogram</button>
+                <button type="button" class="chip" onclick="chipSelect('raty_f','Skrócony — planuję wcześniejsze nadpłaty',this)">⚡ Planuję wcześniejsze nadpłaty</button>
+              </div>
+              <input type="hidden" id="raty_f">
+            </div>
+          </div>
+
+          <div class="mf-row two">
+            <div class="mf-field">
+              <label class="mf-label" for="imie_f">Imię i nazwisko</label>
+              <div class="mf-sub">Jak mamy się do Ciebie zwracać?</div>
+              <div class="mf-input-wrap">
+                <input type="text" id="imie_f" placeholder="np. Jan Kowalski" required>
+              </div>
+            </div>
+            <div class="mf-field">
+              <label class="mf-label" for="telefon_f">Numer kontaktowy</label>
+              <div class="mf-sub">Pośrednik oddzwoni w ciągu 24h</div>
+              <div class="mf-input-wrap">
+                <input type="tel" id="telefon_f" placeholder="np. 600 000 000">
+              </div>
+            </div>
+          </div>
+
+          <div class="mf-row">
+            <div class="mf-field">
+              <label class="mf-label" for="email_f">Adres e-mail</label>
+              <div class="mf-sub">Na ten adres prześlemy potwierdzenie przyjęcia wniosku</div>
+              <div class="mf-input-wrap">
+                <input type="email" id="email_f" placeholder="jan.kowalski@example.com" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="mf-submit">
+            <button type="submit" class="mf-btn">Złóż wniosek kredytowy →</button>
+            <div class="mf-consent">Przesyłając formularz wyrażasz zgodę na kontakt doradcy. Doradztwo jest bezpłatne.</div>
+          </div>
+          <div id="status"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- O MNIE -->
+<section style="background:linear-gradient(135deg,#08111f 0%,#0c1828 100%);color:var(--white);padding:80px 0;border-top:1px solid rgba(201,168,76,.3);">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <div class="eyebrow" style="color:var(--gold);">O doradcy</div>
+        <h2 style="color:var(--white);font-size:32px;margin:10px 0 20px;font-weight:400;">Małgorzata Drzazgowska</h2>
+        <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.8;color:#dfe7e1;margin-bottom:16px;">Pośrednik kredytowy z ponad 20-letnim stażem na rynku finansowym. Przez lata pracy pomogłam setkom klientów uzyskać kredyt na najlepszych możliwych warunkach.</p>
+        <p style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.8;color:#dfe7e1;">Współpracuję z największymi bankami w Polsce — dzięki temu mam dostęp do ofert niedostępnych w standardowych kanałach sprzedaży. Moje doradztwo jest dla Ciebie <strong style="color:var(--gold);">całkowicie bezpłatne</strong>.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:24px;text-align:center;">
+          <div style="font-family:Georgia,serif;font-size:38px;color:var(--gold);line-height:1;">20+</div>
+          <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfe0d6;margin-top:6px;">lat doświadczenia</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:24px;text-align:center;">
+          <div style="font-family:Georgia,serif;font-size:38px;color:var(--gold);line-height:1;">30+</div>
+          <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfe0d6;margin-top:6px;">banków w ofercie</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:24px;text-align:center;">
+          <div style="font-family:Georgia,serif;font-size:38px;color:var(--gold);line-height:1;">0 zł</div>
+          <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfe0d6;margin-top:6px;">koszt doradztwa</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:24px;text-align:center;">
+          <div style="font-family:Georgia,serif;font-size:38px;color:var(--gold);line-height:1;">500 zł</div>
+          <div style="font-family:'Inter','Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#cfe0d6;margin-top:6px;">za polecenie</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORADNIK -->
+<section class="section" id="poradnik" style="background:var(--white);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="kicker">Poradnik</div>
+    <h2>Jak wypełnić formularz — krok po kroku</h2>
+    <div class="divider"></div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>Wybierz cel kredytu</h3><p>Z listy lub quizu wybierz, na co potrzebujesz pieniędzy. To pomaga nam dopasować odpowiedni typ oferty i bank.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Podaj kwotę kredytu</h3><p>Wpisz w złotówkach, ile chcesz pożyczyć. Możesz podać kwotę orientacyjną — doradca pomoże ją skorygować.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Określ okres kredytowania</h3><p>Na ile miesięcy chcesz rozłożyć spłatę? Dłuższy okres = niższa rata, ale wyższy koszt całkowity.</p></div></div>
+      <div class="step"><div class="num">4</div><div><h3>Wskaż liczbę rat</h3><p>Standardowo tyle samo co okres. Jeśli planujesz wcześniejsze nadpłaty — możesz wpisać mniej.</p></div></div>
+      <div class="step"><div class="num">5</div><div><h3>Zostaw dane kontaktowe</h3><p>Podaj e-mail i/lub telefon. Doradca odezwie się w ciągu 24 godzin z gotową propozycją.</p></div></div>
+      <div class="step"><div class="num">6</div><div><h3>Wyślij i czekaj na kontakt</h3><p>Po wysłaniu quizu zgłoszenie trafia do nas automatycznie. Przy formularzu klasycznym otworzy się program pocztowy — wystarczy kliknąć „Wyślij".</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM POLECEŃ -->
+<section class="section" id="polecenia">
+  <div class="wrap">
+    <div class="kicker">Program poleceń</div>
+    <h2>Zarabiaj, polecając nas znajomym</h2>
+    <div class="divider"></div>
+    <div class="referral">
+      <div>
+        <h2>Twój znajomy szuka kredytu? Poleć nas i odbierz 500 zł.</h2>
+        <p>Po tym, jak Twój znajomy wypełni formularz i otrzyma kredyt z naszą pomocą, przelewamy Ci 500 zł na konto. Bez limitu liczby poleceń — im więcej znajomych polecisz, tym więcej zyskasz.</p>
+      </div>
+      <div class="payout">
+        <div class="amt">500<sup>zł</sup></div>
+        <div class="label">za polecenie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-direction:column;gap:6px;align-items:center;">
+    <div style="font-size:15px;color:#e0ddd0;font-family:Georgia,serif;letter-spacing:.3px;">Kredyt bez tajemnic</div>
+    <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8470;">Małgorzata Drzazgowska — Pośrednik Kredytowy</div>
+    <div style="font-size:12px;color:#5a5848;margin-top:4px;">© 2026 Wszelkie prawa zastrzeżone</div>
+  </div>
+</footer>
+
+<script>
+// ---- TAB SWITCH ----
+function switchTab(t){
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===(t==='quiz'?0:1)));
+  document.getElementById('tab-quiz').classList.toggle('active',t==='quiz');
+  document.getElementById('tab-form').classList.toggle('active',t==='form');
+}
+
+// ---- QUIZ LOGIC ----
+const answers = {};
+let currentStep = 1;
+const TOTAL = 6;
+
+function updateProgress(step){
+  const pct = Math.round(((step-1)/(TOTAL-1))*100);
+  document.getElementById('progressBar').style.width = pct+'%';
+  document.getElementById('progressLabel').textContent = step < TOTAL ? 'Krok '+step+' z '+(TOTAL-1) : 'Gotowe!';
+}
+
+function showStep(n){
+  document.querySelectorAll('.quiz-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('step'+n).classList.add('active');
+  currentStep = n;
+  updateProgress(n);
+}
+
+function selectBank(el, val){
+  document.querySelectorAll('.bank-option').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers['bank'] = val;
+  document.getElementById('next2').disabled = false;
+}
+
+function selectOption(el, key, val){
+  el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[key] = val;
+  const nextBtn = document.getElementById('next'+currentStep);
+  if(nextBtn) nextBtn.disabled = false;
+}
+
+function saveVal(key, val){ answers[key] = val; }
+
+function checkNext(step){
+  let ok = false;
+  if(step===2) ok = true; // bank wybierany klikiem
+  if(step===3) ok = document.getElementById('q_rata').value.trim() !== '';
+  if(step===5){
+    const imie = document.getElementById('q_imie').value.trim();
+    const tel = document.getElementById('q_telefon').value.trim();
+    const mail = document.getElementById('q_email').value.trim();
+    ok = imie !== '' && (tel !== '' || mail !== '');
+  }
+  const btn = document.getElementById('next'+step);
+  if(btn) btn.disabled = !ok;
+}
+
+function nextStep(from){ if(from < TOTAL) showStep(from+1); }
+function prevStep(from){ if(from > 1) showStep(from-1); }
+
+async function submitQuiz(){
+  const btn = document.getElementById('next5');
+  btn.disabled = true;
+  btn.textContent = 'Wysyłanie…';
+
+  const data = {
+    'Cel refinansowania':  answers.cel       || '—',
+    'Obecny bank':         answers.bank      || '—',
+    'Obecna rata (zł)':    answers.rata      || '—',
+    'Pozostało do spłaty': answers.pozostalo || '—',
+    'Imię':                answers.imie      || '—',
+    'Telefon':             answers.telefon   || '—',
+    'email':               answers.email     || '—',
+    '_subject': 'Nowe zgłoszenie refinansowania — Kredyt bez tajemnic'
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/xvzjvwjy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) {
+      const json = await res.json();
+      throw new Error(json?.errors?.[0]?.message || 'Błąd serwera');
+    }
+  } catch(err) {
+    alert('Coś poszło nie tak: ' + err.message + '\nSpróbuj ponownie.');
+    btn.disabled = false;
+    btn.textContent = 'Sprawdź oszczędności ✓';
+    return;
+  }
+
+  // Buduj podsumowanie i przejdź do kroku dzięki
+  const summary = document.getElementById('quizSummary');
+  const rows = [
+    ['Cel refinansowania', answers.cel||'—'],
+    ['Obecny bank',        answers.bank||'—'],
+    ['Obecna rata',        answers.rata ? Number(answers.rata).toLocaleString('pl-PL')+' zł' : '—'],
+    ['Pozostało do spłaty',answers.pozostalo||'—'],
+    ['Imię',               answers.imie||'—'],
+    ['Telefon',            answers.telefon||'—'],
+    ['E-mail',             answers.email||'—'],
+  ];
+  summary.innerHTML = rows.map(r=>`<div>${r[0]}: <span>${r[1]}</span></div>`).join('');
+  showStep(6);
+}
+
+// ---- CHIP SELECT (klasyczny formularz) ----
+function chipSelect(fieldId, val, el){
+  el.closest('.mf-chips').querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById(fieldId).value = val;
+}
+
+// ---- KLASYCZNY FORMULARZ — Formspree ----
+document.getElementById('kredytForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = this.querySelector('.mf-btn');
+  const st  = document.getElementById('status');
+  btn.disabled = true;
+  btn.textContent = 'Wysyłanie…';
+
+  const data = {
+    'Przeznaczenie':      document.getElementById('cel_f').value    || 'nie podano',
+    'Kwota':              document.getElementById('kwota_f').value   || 'nie podano',
+    'Horyzont spłaty':    document.getElementById('okres_f').value   || 'nie podano',
+    'Harmonogram rat':    document.getElementById('raty_f').value    || 'nie podano',
+    'Imię i nazwisko':    document.getElementById('imie_f').value    || 'nie podano',
+    'email':              document.getElementById('email_f').value   || 'nie podano',
+    'Telefon':            document.getElementById('telefon_f').value || 'nie podano',
+    '_subject': 'Nowy wniosek kredytowy — Kredyt bez tajemnic'
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/xvzjvwjy', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (res.ok) {
+      st.className = 'ok';
+      st.textContent = '✅ Wniosek wysłany! Oddzwonimy w ciągu 24 godzin.';
+      st.style.display = 'block';
+      this.reset();
+      document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+    } else {
+      const json = await res.json();
+      throw new Error(json?.errors?.[0]?.message || 'Błąd serwera');
+    }
+  } catch(err) {
+    st.className = '';
+    st.style.display = 'block';
+    st.style.background = '#fdecea';
+    st.style.border = '1px solid #c0392b';
+    st.style.color = '#c0392b';
+    st.textContent = '❌ Coś poszło nie tak: ' + err.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Złóż wniosek kredytowy →';
+  }
+});
+</script>
+</body>
+</html>
